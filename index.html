@@ -1,0 +1,353 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Calculator</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .item { margin-bottom: 10px; }
+        label, input { margin-right: 10px; }
+        .item-group { margin-bottom: 10px; } /* Added to adjust spacing between item groups */
+        #total { margin-top: 20px; }
+        #taxRateInput { font-weight: bold; } /* Added to make the tax rate input bold */
+    </style>
+</head>
+<body>
+    <h2>Price Calculator</h2>
+    <div>
+    <label for="taxRateInput">Tax Rate (%)</label>
+    <input type="number" id="taxRateInput" value="0" min="0">
+</div>
+<!-- Security Devices --> 
+<h3 class="section-heading">Security Devices</h3>
+     <div class="item">
+        <span class="itemName">D/W Mini-S</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$129.00</span>
+    </div>
+    <div class="item promo">
+        <span class="itemName">D/W Mini-S Promo</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$49.00</span>
+    </div>
+    <!--
+    <div class="item">
+        <span class="itemName">D/W Standard Extended</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$109.00</span>
+    </div>
+    -->
+    <div class="item">
+        <span class="itemName">Shock Sensor</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$149.00</span>
+    </div>
+    <div class="item promo">
+        <span class="itemName">Shock Sensor Promo</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$50.00</span>
+    </div>
+    <div class="item">
+        <span class="itemName">Motion</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$219.00</span>
+    </div>
+    <div class="item">
+        <span class="itemName">Glassbreak</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$219.00</span>
+    </div>
+    <div class="item">
+        <span class="itemName">Temp Sensor</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$149.00</span>
+    </div>
+    <div class="item">
+        <span class="itemName">Flood</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$149.00</span>
+    </div>
+    <!--
+    <div class="item">
+        <span class="itemName">Tilt</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$169.00</span>
+    </div> 
+    -->
+    <div class="item">
+        <span class="itemName">Indoor Siren</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$129.00</span>
+    </div>
+    <div class="item">
+        <span class="itemName">Hardwire Overhead Garage Door</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$89.00</span>
+    </div>
+
+    <!-- Life Safety -->
+    <h3 class="section-heading">Life Safety</h3>
+    <div class="item">
+        <span class="itemName">Smoke</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$229.00</span>
+    </div>
+    <div class="item">
+        <span class="itemName">CO</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$219.00</span>
+    </div>
+    <div class="item">
+        <span class="itemName">Heat</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$129.00</span>
+    </div>
+
+    <!-- IQ Add-On/FOB -->
+    <h3 class="section-heading">IQ Add-On/FOB</h3>
+    <div class="item">
+        <span class="itemName">Secondary Keypad</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$420.00</span>
+    </div>
+    <div class="item">
+        <span class="itemName">Key Fob</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$119.00</span>
+    </div>
+    <div class="item">
+        <span class="itemName">IQ Base Speaker</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$129.00</span>
+    </div>
+
+    <!-- Video -->
+    <h3 class="section-heading">Video</h3>
+    <div class="item">
+        <span class="itemName">Outdoor Camera</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$349.00</span>
+    </div>
+    <div class="item promo">
+        <span class="itemName">Outdoor Camera Promo</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$70.00</span>
+    </div>
+    <div class="item">
+        <span class="itemName">Indoor Camera</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$279.00</span>
+    </div>
+    <div class="item promo">
+        <span class="itemName">Indoor Camera Promo</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$70.00</span>
+    </div>
+    <div class="item">
+        <span class="itemName">Video Doorbell</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$349.00</span>
+    </div>
+
+    <!-- Automation -->
+    <h3 class="section-heading">Automation</h3>
+    <div class="item">
+        <span class="itemName">Garage Door Controller</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$249.00</span>
+    </div>
+    <div class="item">
+        <span class="itemName">Lamp Module (Z-Wave)</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$159.00</span>
+    </div>
+    <div class="item">
+        <span class="itemName">Kwikset Lock (Dead Bolt)</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$249.00</span>
+    </div>
+    <div class="item">
+        <span class="itemName">Alarm.com - Thermostat (Z-Wave)</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$249.00</span>
+    </div>
+    <!--
+    <div class="item">
+        <span class="itemName">Deako Simple Dimmer</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$79.00</span>
+    </div>
+    <div class="item">
+        <span class="itemName">Deako Smart Switch</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$149.00</span>
+    </div>
+    <div class="item">
+        <span class="itemName">Deako Smart Dimmer</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$179.00</span>
+    </div> -->
+
+    <!-- WiFi -->
+    <div class="item">
+        <span class="itemName">Eero Base WiFi Hub</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$159.00</span>
+    </div>
+    <div class="item">
+        <span class="itemName">Eero Pro WiFi Hub</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$249.00</span>
+    </div>
+
+    <!-- Plan Upgrades -->
+    <div class="item">
+        <span class="itemName">Traditional to Video Auto Upgrade</span>
+        <input type="number" class="itemQuantity" value="0" min="0">
+        <span class="itemPrice">$200.00</span>
+    </div>
+
+    <!-- Add more items here following the same structure -->
+
+<!-- Subtotal -->
+ <div class="item-group">
+        <h3>Totals</h3>
+        <div class="subtotal">
+            Subtotal: $<span id="subtotalValue">0.00</span>
+        </div>
+    </div>
+
+    <!-- Tax -->
+    <div class="item-group">
+        <!--<h3>Tax</h3>-->
+        <div class="tax">
+            Tax: $<span id="taxValue">0.00</span>
+        </div>
+    </div>
+
+    <!-- Total -->
+    <div class="item-group">
+        <!--<h3>Total</h3>-->
+        <div class="total">
+            Total: $<span id="totalValue">0.00</span>
+        </div>
+    </div>
+
+    <!-- Flex Pay -->
+    <div class="item-group">
+        <div class="flex-pay">
+            Flex Pay: $<span id="flexPayValue"></span>
+        </div>
+    </div>
+
+    <!-- Synchrony Options -->
+    <div class="item-group">
+        <div class="synchrony-25">
+            Synchrony (25 months): $<span id="synchrony25Value"></span>/month
+        </div>
+        <div class="synchrony-36">
+            Synchrony (36 months): $<span id="synchrony36Value"></span>/month
+        </div>
+    </div>
+
+    <button onclick="calculateTotal()">Calculate</button>
+
+    <script>
+
+    //Security Devices
+        const items = [
+    { name: 'dwMiniS', price: 129.00 },
+    { name: 'dwMiniSPromo', price: 49.00 },
+
+    //{ name: 'dwStandardExtended', price: 109.00 },
+    { name: 'shockSensor', price: 149.00 },
+    { name: 'shockSensorPromo', price: 50.00 },
+    { name: 'motion', price: 219.00 },
+    { name: 'glassbreak', price: 219.00 },
+    { name: 'tempSensor', price: 149.00 },
+    { name: 'flood', price: 149.00 },
+
+    //{ name: 'tilt', price: 169.00 },
+    { name: 'indoorSiren', price: 129.00 },
+    { name: 'hardwireOverheadGarageDoor', price: 89.00 },
+   
+    // Life Safety
+    { name: 'smoke', price: 229.00 },
+    { name: 'co', price: 219.00 },
+    { name: 'heat', price: 129.00 },
+
+    // IQ Add-On/FOB
+    { name: 'secondaryKeypad', price: 420.00 },
+    { name: 'keyFob', price: 119.00 },
+    { name: 'iqBaseSpeaker', price: 129.00 },
+
+    // Video
+    { name: 'alarmComCameraOutdoor', price: 349.00 },
+    { name: 'alarmComCameraOutdoorPromo', price: 70.00 },
+    { name: 'alarmComCameraIndoor', price: 279.00 },
+    { name: 'alarmComCameraIndoorPromo', price: 70.00 },
+    { name: 'alarmComVideoDoorbell', price: 349.00 },
+
+    // Automation
+    { name: 'garageDoorController', price: 249.00 },
+    { name: 'lampModuleZWave', price: 159.00 },
+    { name: 'kwiksetLockDeadBolt', price: 249.00 },
+    { name: 'alarmComThermostatZWave', price: 249.00 },
+    //{ name: 'deakoSimpleDimmer', price: 79.00 },
+    //{ name: 'deakoSmartSwitch', price: 149.00 },
+    //{ name: 'deakoSmartDimmer', price: 179.00 },
+
+    // WiFi
+    { name: 'eeroBaseWiFiHub', price: 159.00 },
+    //{ name: 'eeroProWiFiHub', price: 249.00 },
+
+    //Package Upgrades
+    { name: 'traditionalToVideoAutoUpgrade', price: 200.00}
+    // ... Add other items following the same pattern
+];
+
+    // ... Add other items following the same pattern
+
+function calculatePayments() {
+        const total = parseFloat(document.getElementById('totalValue').textContent);
+        
+        // Flex Pay
+        const flexPay = total / 3;
+        document.getElementById('flexPayValue').textContent = flexPay.toFixed(2);
+
+        // Synchrony Options
+        const synchrony25 = total / 25;
+        document.getElementById('synchrony25Value').textContent = synchrony25.toFixed(2);
+
+        const synchrony36 = total / 36;
+        document.getElementById('synchrony36Value').textContent = synchrony36.toFixed(2);
+    }
+
+    function calculateTotal() {
+    //event.preventDefault(); // Prevent the default behavior of the button
+
+        let subtotal = 0;
+        const itemElements = document.getElementsByClassName('item');
+
+        for (let item of itemElements) {
+            const quantity = parseFloat(item.querySelector('.itemQuantity').value) || 0;
+            const priceText = item.querySelector('.itemPrice').textContent;
+            const price = parseFloat(priceText.replace('$', ''));
+            subtotal += quantity * price;
+        }
+
+        document.getElementById('subtotalValue').textContent = subtotal.toFixed(2);
+
+        const taxRate = parseFloat(document.getElementById('taxRateInput').value) || 0;
+        const tax = subtotal * (taxRate / 100);
+        document.getElementById('taxValue').textContent = tax.toFixed(2);
+
+        const total = subtotal + tax;
+        document.getElementById('totalValue').textContent = total.toFixed(2);
+
+        calculatePayments(); // Calculate payments after updating the total
+    }
+    </script>
+</body>
+</html>
